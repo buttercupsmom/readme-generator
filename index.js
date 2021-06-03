@@ -9,17 +9,29 @@ ${responses.description}
 
 ## Table of Contents
 * [Installation](##-Installation)
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
+* [Usage](##-Usage)
+* [License](##-License)
+* [Contributing](##-Contributing)
+* [Tests](##-Tests)
+* [Questions](##-Questions)
 
 ## Installation
 ${responses.installation}
 
 ## Usage
-${responses.usage}`;
+${responses.usage}
+
+## License
+${responses.license}
+
+## Contributing
+${responses.contributing}
+
+## Tests
+${responses.tests}
+
+## Questions
+For additional information please contact me via GitHub at [https://github.com/${responses.github}](https://github.com/${responses.github}) or via email at [${responses.email}](mailto:${responses.email}?subject=[GitHub] README Generator).`
 };
 
 // TODO: Create an array of questions for user input
@@ -47,14 +59,31 @@ inquirer
         },
         {
             type: 'input',
-            name: 'credits',
-            message: 'List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.'
-        },
-        {
-            type: 'input',
             name: 'license',
             message: 'License'
         },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'If you would like other developers to contribute to your application or package, include guidelines here.'
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Describe how to run the tests on your application.'
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter your GitHub user name.'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter your email address.'
+        },
+
+
     ])
     .then((responses) => {
         // Use user feedback for... whatever!!
