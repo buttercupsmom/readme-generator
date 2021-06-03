@@ -7,6 +7,14 @@ const generateMD = (responses) => {
 ## Description
 ${responses.description}
 
+## Table of Contents
+* [Installation](##-Installation)
+* Usage
+* License
+* Contributing
+* Tests
+* Questions
+
 ## Installation
 ${responses.installation}
 
