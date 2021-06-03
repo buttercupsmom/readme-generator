@@ -2,13 +2,16 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMD = (responses) => {
-    return `#${title}
+    return `# ${responses.title}
 
-    ##${description}
+## Description
+${responses.description}
 
-    ##${installation}
+## Installation
+${responses.installation}
 
-    ##${usage}`;
+## Usage
+${responses.usage}`;
 };
 
 // TODO: Create an array of questions for user input
@@ -48,8 +51,8 @@ inquirer
     .then((responses) => {
         // Use user feedback for... whatever!!
         console.log(responses);
-        const markdownContent = generateMD(responses);
-        fs.writeFile('README.md', markdownContent, (err) => err ? console.log(err) : console.log('fuck yeah'));
+        const readmeContent = generateMD(responses)
+        fs.writeFile('README.md', readmeContent, (err) => err ? console.log(err) : console.log('fuck yeah'));
     })
     .catch((error) => {
         if (error.isTtyError) {
