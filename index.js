@@ -4,6 +4,8 @@ const inquirer = require('inquirer');
 const generateMD = (responses) => {
     return `# ${responses.title}
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Description
 ${responses.description}
 
@@ -58,9 +60,10 @@ inquirer
             message: 'Provide instructions and examples for use. Include screenshots as needed.'
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'license',
-            message: 'License'
+            message: 'Choose a license.',
+            choices: ['The MIT License', 'The Do What the Fuck You Want to Public License', 'Mozilla Public License 2.0', 'The Unlicense']
         },
         {
             type: 'input',
