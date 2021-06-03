@@ -8,12 +8,12 @@ const generateMD = (responses) => {
 ${responses.description}
 
 ## Table of Contents
-* [Installation](##-Installation)
-* [Usage](##-Usage)
-* [License](##-License)
-* [Contributing](##-Contributing)
-* [Tests](##-Tests)
-* [Questions](##-Questions)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
 
 ## Installation
 ${responses.installation}
@@ -31,7 +31,7 @@ ${responses.contributing}
 ${responses.tests}
 
 ## Questions
-For additional information please contact me via GitHub at [https://github.com/${responses.github}](https://github.com/${responses.github}) or via email at [${responses.email}](mailto:${responses.email}?subject=[GitHub] README Generator).`
+For additional information please contact me via GitHub at [https://github.com/${responses.github}](https://github.com/${responses.github}) or via email at [${responses.email}](mailto:${responses.email}?subject=[GitHub]%README%Generator).`
 };
 
 // TODO: Create an array of questions for user input
