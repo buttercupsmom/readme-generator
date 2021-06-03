@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const generateMD = (responses) => {
     return `# ${responses.title}
 
-${responses.license}
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 ${responses.description}
