@@ -4,12 +4,12 @@
 This README Generator generates professional, clean README files for your application or project.
 
 ## Table of Contents
-* [Installation](##-Installation)
-* [Usage](##-Usage)
-* [License](##-License)
-* [Contributing](##-Contributing)
-* [Tests](##-Tests)
-* [Questions](##-Questions)
+* [Installation](#-Installation)
+* [Usage](#-Usage)
+* [License](#-License)
+* [Contributing](#-Contributing)
+* [Tests](#-Tests)
+* [Questions](#-Questions)
 
 ## Installation
 Open the Terminal, run 'node index.js' and press enter.
@@ -27,4 +27,4 @@ N/A
 N/A
 
 ## Questions
-For additional information please contact me via GitHub at [https://github.com/vmichalecki](https://github.com/vmichalecki) or via email at [valerie227@gmail.com](mailto:valerie227@gmail.com?subject=[GitHub] README Generator).
+For additional information please contact me via GitHub at [https://github.com/vmichalecki](https://github.com/vmichalecki) or via email at [valerie227@gmail.com](mailto:valerie227@gmail.com?subject=[GitHub]%README%Generator).
