@@ -2,9 +2,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMD = (responses) => {
+    const license = responses.license === "none" ? "" : responses.license;
+    const licenseBadge = responses.license === "none" ? null : `![Github License](https://img.shields.io/badge/License-${license}-yellow.svg)`
     return `# ${responses.title}
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+${licenseBadge}
 
 ## Description
 ${responses.description}
@@ -36,7 +38,6 @@ ${responses.tests}
 For additional information please contact me via GitHub at [https://github.com/${responses.github}](https://github.com/${responses.github}) or via email at [${responses.email}](mailto:${responses.email}?subject=[GitHub]%README%Generator).`
 };
 
-// TODO: Create an array of questions for user input
 inquirer
     .prompt([
         {
@@ -63,7 +64,7 @@ inquirer
             type: 'list',
             name: 'license',
             message: 'Choose a license.',
-            choices: ['The MIT License', 'The Do What the Fuck You Want to Public License', 'Mozilla Public License 2.0', 'The Unlicense']
+            choices: ['MIT', 'WTFPL', 'ISC', 'Unlicense']
         },
         {
             type: 'input',
@@ -85,28 +86,9 @@ inquirer
             name: 'email',
             message: 'Enter your email address.'
         },
-
-
     ])
     .then((responses) => {
-        // Use user feedback for... whatever!!
         console.log(responses);
         const readmeContent = generateMD(responses)
-        fs.writeFile('README.md', readmeContent, (err) => err ? console.log(err) : console.log('fuck yeah'));
-    })
-    .catch((error) => {
-        if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
-        } else {
-            // Something else went wrong
-        }
+        fs.writeFile('./utils/generated-README.md', readmeContent, (err) => err ? console.log(err) : console.log('README generated'));
     });
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
-
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
-init();
