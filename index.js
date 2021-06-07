@@ -1,4 +1,3 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMD = (responses) => {
@@ -21,7 +20,7 @@ ${responses.description}
 
 ## Installation
 ${responses.installation}
-
+    
 ## Usage
 ${responses.usage}
 
